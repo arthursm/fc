@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ 
 <style>
 * {
   box-sizing: border-box;
@@ -20,7 +22,7 @@ body {
   margin: 100px auto;
   font-family: Raleway;
   padding: 40px;
-  width: 70%;
+  width: 65%;
   min-width: 300px;
 }
 
@@ -83,6 +85,8 @@ button:hover {
 body{
 background-color: #00FF7F;
 }
+
+/*
 .conteudo{
 background-color: #7FFFD4;																								
 margin-left: 10vw;
@@ -98,6 +102,8 @@ h1{
 .itemResposta{
 font-size: 3vh;
 }
+
+*/
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #04AA6D;
@@ -105,42 +111,867 @@ font-size: 3vh;
 </style>
 <body>
 
-<form id="regForm" action="/action_page.php">
-  <h1>Register:</h1>
-  <!-- One "tab" for each step in the form: -->
-  <div class="tab">Name:
+<form id="regForm"  action="/resultado.html"> 
 
-    
-<div class="conteudo">
-<h1>1. Com que frequência você come carne vermelha?</h1>
+
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+  
+ 
+<h1> Com que frequência você come carne vermelha?</h1>
+<br>
+<p>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="itemResposta" for="flexRadioDefault1">
+  <input class="form-check-input" type="radio" value="5" name="p1item" id="p1item1">
+  <label class="itemResposta" for="p1item1">
     Nunca como carne vermelha
   </label>
 </div>
+<p>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="itemResposta" for="flexRadioDefault2">
+  <input class="form-check-input" type="radio" value="5" name="p1item" id="p1item2">
+  <label class="itemResposta" for="p1item2">
     Com pouca frequência (três vezes por semana)
   </label>
 </div>
+<p>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="itemResposta" for="flexRadioDefault2">
+  <input class="form-check-input" type="radio" value="4" name="p1item" id="p1item3">
+  <label class="itemResposta" for="p1item3">
     Ocasionalmente (Uma vez por dia)
   </label>
 </div>
+<p>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-  <label class="itemResposta" for="flexRadioDefault2">
+  <input class="form-check-input" type="radio" value="1" name="p1item" id="p1item4">
+  <label class="itemResposta" for="p1item4">
     Frequentemente (uma vez no almoço e outra no lanche da tarde ou jantar)
   </label>
+</div> 
 </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <div class="tab">
+  
+ 
+<h1> Voce utiliza ar condicionado?</h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p2item" id="p2item1">
+  <label class="itemResposta" for="p2item1">
+    Nunca uso
+  </label>
 </div>
-    <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-  </div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="3" name="p2item" id="p2item2">
+  <label class="itemResposta" for="p2item2">
+    Uso diariamente (ate três horas por dia)
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="1" name="p2item" id="p2item3">
+  <label class="itemResposta" for="p2item3">
+    Uso  diariamente (mais de três horas )
+  </label>
+</div>
+<p> 
+</div>
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> De onde vem os alimentos que você consome?</h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p3item" id="p3item1">
+  <label class="itemResposta" for="p3item1">
+    De minha própria horta e pomar ou de lojas de produtos
+orgânicos ou feiras de bairros
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="4" name="p3item" id="p3item2">
+  <label class="itemResposta" for="p3item2">
+    A maior parte de feiras, quitandas. Poucas vezes compro em
+supermercados ou hipermercados
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="2" name="p3item" id="p3item3">
+  <label class="itemResposta" for="p3item3">
+     Normalmente em supermercados e poucas vezes
+em feiras e quitandas
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="1" name="p3item" id="p3item4">
+  <label class="itemResposta" for="p3item4">
+    Sempre de supermercados e hipermercado
+  </label>
+</div> 
+</div>
+ 
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p4item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="4" name="p4item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="2" name="p4item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="0" name="p4item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Com que frequência você ou sua família compra eletrodomésticos
+e equipamentos eletrônicos (televisões, computadores, celulares, etc)? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p5item" id="p5item1">
+  <label class="itemResposta" for="p5item1">
+    Somente quando quebram e precisam ser substituídos
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="2" name="p5item" id="p5item2">
+  <label class="itemResposta" for="p5item2">
+    Ocasionalmente troco por versões mais modernas
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="0" name="p5item" id="p5item3">
+  <label class="itemResposta" for="p5item3">
+    Troco sempre por aparelhos mais modernos
+  </label>
+</div> 
+</div>
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Que meio de transporte você usa com mais frequência? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p6item" id="p6item1">
+  <label class="itemResposta" for="p6item1">
+    Bicicleta ou me locomovo a pé 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="1" name="p6item" id="p6item2">
+  <label class="itemResposta" for="p6item2">
+    Carro ou Moto 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p6item" id="p6item3">
+  <label class="itemResposta" for="p6item3">
+    Transporte público (ônibus, topique ou metrô)
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="2" name="p6item" id="p6item4">
+  <label class="itemResposta" for="p6item4">
+    Carro ou Moto (Mas percursos curtos faço de bicicleta ou a pé)
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Você consome refrigerantes com que frequência? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p7item" id="p7item1">
+  <label class="itemResposta" for="p7item1">
+    Nunca
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="4" name="p7item" id="p7item2">
+  <label class="itemResposta" for="p7item2">
+    Raramente (Uma vez por semana ou menos)
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="2" name="p7item" id="p7item3">
+  <label class="itemResposta" for="p7item3">
+    Ocasionalmente (Três vezes por semana) 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="1" name="p7item" id="p7item4">
+  <label class="itemResposta" for="p7item4">
+    Frequentemente (Uma vez por dia ou mais)
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quanto tempo você gasta no banho diário?
+(somando o tempo gasto em todos os banhos que
+você toma em um dia) </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="1" name="p8item" id="p8item1">
+  <label class="itemResposta" for="p8item1">
+    Acima de 25 minutos
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="3" name="p8item" id="p8item2">
+  <label class="itemResposta" for="p8item2">
+    De 15 a 25 minutos
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p8item" id="p8item3">
+  <label class="itemResposta" for="p8item3">
+    De 5 até 15 minutos
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" value="5" name="p8item" id="p8item4">
+  <label class="itemResposta" for="p8item4">
+    Sou cascão, só tomo um banho e menor que 5 minutos.
+  </label>
+</div> 
+<!--  <button type="button" class="btn btn-warning" onclick="soma()">Warning</button> -->
+</div>
+
+
+
+
+
+
+<!-- 
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="tab">
+  
+ 
+<h1> Quantas vezes por ano você compra sapatos e roupas novas? </h1>
+<br>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item1">
+  <label class="itemResposta" for="p4item1">
+    Uma vez por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item2">
+  <label class="itemResposta" for="p4item2">
+    De duas a três vezes por ano
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item3">
+  <label class="itemResposta" for="p4item3">
+    Uma vez por mês 
+  </label>
+</div>
+<p>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="item" id="p4item4">
+  <label class="itemResposta" for="p4item4">
+    Mais de uma vez por mês
+  </label>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
   <div class="tab">Contact Info:
     <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
     <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
@@ -154,10 +985,15 @@ font-size: 3vh;
     <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
     <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
   </div>
+  
+  -->
+  
+
+ 
   <div style="overflow:auto;">
     <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Voltar</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
@@ -166,10 +1002,50 @@ font-size: 3vh;
     <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span> 
+    <span class="step"></span> 
   </div>
 </form>
 
 <script>
+
+
+$('#regForm input').on('change', function() {
+/*
+   document.cookie = "p1="+$('input[name=p1item]:checked', '#regForm').val();
+   document.cookie = "p2="+$('input[name=p2item]:checked', '#regForm').val();
+   document.cookie = "p3="+$('input[name=p3item]:checked', '#regForm').val();
+   document.cookie = "p4="+$('input[name=p4item]:checked', '#regForm').val();
+   document.cookie = "p5="+$('input[name=p5item]:checked', '#regForm').val();
+   document.cookie = "p6="+$('input[name=p6item]:checked', '#regForm').val();
+   document.cookie = "p7="+$('input[name=p7item]:checked', '#regForm').val();
+   document.cookie = "p8="+$('input[name=p8item]:checked', '#regForm').val();
+   */
+   
+   
+  // alert($('input[name=p1item]:checked', '#regForm').val());
+   let p_um =  $('input[name=p1item]:checked', '#regForm').val();
+   let p_dois =  $('input[name=p2item]:checked', '#regForm').val();
+   let p_tres =  $('input[name=p3item]:checked', '#regForm').val();
+   let p_quatro =  $('input[name=p4item]:checked', '#regForm').val();
+   let p_cinco =  $('input[name=p5item]:checked', '#regForm').val();
+   let p_seis =  $('input[name=p6item]:checked', '#regForm').val();
+   let p_sete =  $('input[name=p7item]:checked', '#regForm').val();
+   let p_oito =  $('input[name=p8item]:checked', '#regForm').val();  
+    
+	let soma = (parseInt(p_um)+parseInt(p_dois)+parseInt(p_tres)+parseInt(p_quatro)+parseInt(p_cinco)+parseInt(p_seis)+parseInt(p_sete)+parseInt(p_oito));
+	document.cookie = soma;
+});
+
+  
+ 
+function soma(){
+	let x = document.cookie;
+	alert(x);
+}
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -186,7 +1062,7 @@ function showTab(n) {
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").innerHTML = "Proximo";
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
