@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+p {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 65%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+body{
+background-color: #00FF7F;
+}
+
+/*
+.conteudo{
+background-color: #7FFFD4;																								
+margin-left: 10vw;
+width: 80vw;
+padding-left: 5vw;
+padding-top: 3vh;
+padding-bottom: 3vh;
+
+}
+h1{
+	font-size:5vh;
+}
+.itemResposta{
+font-size: 3vh;
+}
+
+*/
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+
+#refazer {  
+  margin: 100px auto;
+  font-family: Raleway; 
+  width: 65%;  
+  text-align: center; 
+}
+
+</style>
+<body>
+ 
+ <p id="resultado"></p>
+ <div class="refazer" id="refazer"></div>
+ 
+    
+
+<script>
+   
+
+function soma(){
+  let x = parseInt(document.cookie);  
+   
+if( x > 49){
+document.getElementById("resultado").innerHTML = '<b>Parabéns!! Você está antenado com as questões ambientais e busca ter qualidade de vida sem agredir o meio ambiente. </b><br><br> Compartilhe com seus amigos formas ter uma vida mais sustentável.';
+document.getElementById("refazer").innerHTML = '<button type="button" class="btn btn-secondary" onclick="soma()">Refazer teste</button>';
+}else if( x > 34 && x < 50){
+document.getElementById("resultado").innerHTML = '<b>Sua pegada é moderada. Seu estilo de vida está um pouco acima da capacidade natural de regeneração de recursos pelo planeta, de modo que seu padrão de consumo demanda moderadamente mais do que a Terra pode repor. </b><br><br> Procure fazer a pé ou de bicicleta os percursos curtos do dia a dia, como: ir à padaria, academia ou farmácia no seu bairro. Utilize o carro somente para percursos longos';
+document.getElementById("refazer").innerHTML = '<button type="button" class="btn btn-secondary" onclick="soma()">Refazer teste</button>';
+}else{
+document.getElementById("resultado").innerHTML = '<b> Você precisa rever seus hábitos de consumo e seu estilo de vida! Você vive de forma insustentável, pois demanda muito mais recursos do que a capacidade natural de regeneração, pelo planeta.</b><br><br>Pense duas vezes antes de comprar algo novo. Verifique se o produto antigo não atende mesmo às suas necessidades e, caso esteja quebrado ou com problemas, se não pode ser consertado. Utilize os transportes alternativos,como metrô, bicicleta e até mesmo uma boa caminhada, estes diminuem a emissão dos gases de efeito estufa.';
+document.getElementById("refazer").innerHTML = '<button type="button" class="btn btn-secondary" onclick="soma()">Refazer teste</button>';
+}; 
+  
+}; 
+
+ soma();
+ 
+</script>
+
+</body>
+</html>
