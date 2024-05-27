@@ -135,7 +135,7 @@ function soma(){
   let x = parseInt(document.cookie);  
    
 if( x > 39){
-document.getElementById("resultado").innerHTML = '<b>Parabéns!! Você está antenado com as questões ambientais e busca ter qualidade de vida sem agredir o meio ambiente. </b><br><br> Compartilhe com seus amigos formas ter uma vida mais sustentável.';
+document.getElementById("resultado").innerHTML = '<b>Parabéns!! Você está antenado com as questões ambientais e busca ter qualidade de vida sem agredir o meio ambiente. </b><br><br> Sua pegada foi '+x+'<br> Para efeito de comparação: Igual ou acima de 40 sua pegada é boa, de 27 a 39 sua pegada é média e 36 ou abaixo sua pegada é ruim. <br><br>Compartilhe com seus amigos formas ter uma vida mais sustentável.';
 document.getElementById("refazer").innerHTML = '<button type="button" class="btn btn-secondary" onclick="redireciona()">Refazer teste</button>';
 }else if( x > 26 && x < 40){
 document.getElementById("resultado").innerHTML = '<b>Sua pegada é moderada. Seu estilo de vida está um pouco acima da capacidade natural de regeneração de recursos pelo planeta, de modo que seu padrão de consumo demanda moderadamente mais do que a Terra pode repor. </b><br><br> Procure fazer a pé ou de bicicleta os percursos curtos do dia a dia, como: ir à padaria, academia ou farmácia no seu bairro. Utilize o carro somente para percursos longos';
