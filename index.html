@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaSense 💧</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TELA INICIAL -->
+  <section class="hero">
+  <div class="hero-content">
+    <h1 class="logo">🌊 AquaSense</h1>
+    <p class="subtitle">Descubra o impacto do seu consumo de água.</p>
+    <a href="#about" class="scroll-down" title="Role para baixo">↓</a>
+  </div>
+  <div class="bubbles"></div>
+</section>
+
+
+  <!-- SOBRE / COMO FUNCIONA -->
+  <section id="about" class="about">
+    <h2>Como funciona?</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>💧</h3>
+        <p>Responda perguntas sobre seus hábitos de uso da água.</p>
+      </div>
+      <div class="step">
+        <h3>📊</h3>
+        <p>Veja seu nível de sustentabilidade hídrica.</p>
+      </div>
+      <div class="step">
+        <h3>🌿</h3>
+        <p>Receba dicas personalizadas para melhorar.</p>
+      </div>
+    </div>
+    <button id="startBtn" class="btn primary">Começar o Quiz</button>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="quiz hidden">
+    <div class="progress-wrapper">
+      <span id="progress-text">0%</span>
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </div>
+    <div id="question-container" class="question-container"></div>
+  </section>
+
+  <!-- RESULTADO -->
+  <section id="result" class="result hidden">
+    <div class="result-card">
+      <h2>💦 Seu Resultado</h2>
+      <div class="circle"><span id="percent">0%</span></div>
+      <p id="message"></p>
+      <button id="restartBtn" class="btn secondary">Voltar ao Início</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
